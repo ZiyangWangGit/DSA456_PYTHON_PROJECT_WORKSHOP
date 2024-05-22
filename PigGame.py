@@ -1,10 +1,7 @@
-import random  # Import the random library to generate random numbers
+import random 
 
 def roll():
-  """
-  This function generates a random number between 1 and 6 (inclusive).
-  Returns:int: The random number generated.
-  """
+#   This function generates a random number between 1 and 6 (inclusive).Returns:int: The random number generated.
   min_value = 1
   max_value = 6
   roll = random.randint(min_value, max_value)
@@ -12,25 +9,22 @@ def roll():
 
 # Generate a random number for initial testing
 value = roll()
-print(value)  # Print the initial random number (optional)
+print(value)  
 
 while True:
-  """
-  This loop keeps prompting the user for the number of players until a valid input is provided (between 1 and 4).
-  """
+#   This loop keeps prompting the user for the number of players until a valid input is provided (between 1 and 4).
   players = input("Enter the number of players (1-4): ")
   if players.isdigit():
     players = int(players)
     if 1 <= players <= 4:
-      break  # Exit the loop if a valid number of players is entered
+      break 
     else:
       print("Must be between 1 - 4 players")
   else:
     print("Invalid, try again.")
 
 max_score = 50
-player_scores = [0 for _ in range(players)]  # Create a list to store player scores (initialized to 0)
-
+player_scores = [0 for _ in range(players)] 
 while max(player_scores) < max_score:
   """
   This loop continues until a player reaches the winning score (max_score).
