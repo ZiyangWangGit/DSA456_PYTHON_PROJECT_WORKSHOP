@@ -3,9 +3,7 @@ import random  # Import the random library to generate random numbers
 def roll():
   """
   This function generates a random number between 1 and 6 (inclusive).
-
-  Returns:
-      int: The random number generated.
+  Returns:int: The random number generated.
   """
   min_value = 1
   max_value = 6
